@@ -6,8 +6,9 @@
  * Time: 9:19 PM
  */
 
-class Teachingassistent extends CI_Controller
+class Teachingassistant extends CI_Controller
 {
+	// Access `http://<hostname>/index.php/teachingassistant/dashboard` to find out
 	public function dashboard()
 	{
 		// todo This will be load after authentication

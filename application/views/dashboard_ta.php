@@ -9,7 +9,7 @@
 	<h1>Dashboard</h1>
 <?php
 
-echo 'hello' . $data['ta_firstname'];
+echo 'hello ' . $ta_firstname;
 
 
 
