@@ -8,8 +8,17 @@
 ?>
 	<h1>Dashboard</h1>
 <?php
+	echo 'hello ' . $ta_firstname;
+?>
 
-echo 'hello ' . $ta_firstname;
+	<h3>My Instructors</h3>
 
+	<ul>
+	<?php foreach ($instructor_list as $item):?>
+
+		<li><?php echo $item;?></li>
+
+	<?php endforeach;?>
+	</ul>
 
 

@@ -11,4 +11,10 @@ class Student_model extends CI_Model
 	public $firstname;
 	public $lastname;
 	public $pitt_id;
+
+	public function __construct()
+	{
+		//$this->load->database();
+	}
+
 }
