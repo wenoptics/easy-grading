@@ -20,5 +20,3 @@
 
 	<?php endforeach;?>
 	</ul>
-
-
