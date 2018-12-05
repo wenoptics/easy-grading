@@ -66,7 +66,7 @@ class Auth extends CI_Controller
 		{
 			// check to see if the user is logging in
 			// check for "remember me"
-			$remember = (bool)$this->input->post('remember');
+                                        $remember = (bool)$this->input->post('remember');
 
 			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{

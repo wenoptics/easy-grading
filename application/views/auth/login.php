@@ -1,28 +1,23 @@
-<h1><?php echo lang('login_heading');?></h1>
-<p><?php echo lang('login_subheading');?></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - Login</title>
+</head>
+<body class="text-center">
+<div id="login">
+    <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+        <label for="inputEmail" class="sr-only">Pitt email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Pitt email address" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
-<div id="infoMessage"><?php echo $message;?></div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+        <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+    </form>
 
-<?php echo form_open("auth/login");?>
-
-  <p>
-    <?php echo lang('login_identity_label', 'identity');?>
-    <?php echo form_input($identity);?>
-  </p>
-
-  <p>
-    <?php echo lang('login_password_label', 'password');?>
-    <?php echo form_input($password);?>
-  </p>
-
-  <p>
-    <?php echo lang('login_remember_label', 'remember');?>
-    <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
-  </p>
-
-
-  <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
-
-<?php echo form_close();?>
-
-<p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
+</div>
+<script src="/index.php/statics/serve/main.js"></script>
+</body>
+</html>
