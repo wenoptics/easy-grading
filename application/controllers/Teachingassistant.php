@@ -11,6 +11,7 @@ class Teachingassistant extends CI_Controller
 	// Access `http://<hostname>/index.php/teachingassistant/dashboard` to find out
 	public function dashboard()
 	{
+
 		$this->load->model('Teachingassistant_model');
 
 		// todo This will be load after authentication
