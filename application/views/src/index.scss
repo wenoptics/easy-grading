@@ -4,6 +4,13 @@
     text-align: center!important;
 }
 
+.page {
+	width: 1080px;
+    background: #fff;
+    padding: 30px;
+    overflow: hidden;
+}
+
 body {
     display: -ms-flexbox;
     display: -webkit-box;
@@ -62,11 +69,6 @@ body {
 }
 
 #dash {
-    width: 1080px;
-    background: #fff;
-    padding: 30px;
-    overflow: hidden;
-
 	h3 {
 		margin: 50px auto 30px;
 	}
