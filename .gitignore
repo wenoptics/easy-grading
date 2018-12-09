@@ -11,7 +11,7 @@ application/logs/*
 composer.lock
 
 application/views/node_modules/
-application/views/dist/
+application/views/dist/main.js
 
 # IDE Files
 #-------------------------
