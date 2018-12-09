@@ -100,16 +100,88 @@ body {
 }
 
 #grading {
-	textarea {
-		padding-top: 25px;
-		border: none;
-		resize: none;
+	.grading-icon {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+
+		svg {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: -10px;
+			top: -3px;
+		}
+	}
+
+	h5 {
+		padding-left: 10px;
+	}
+
+	input[type="submit"] {
+		width: 100%;
 	}
 
 	.files {
 		margin-top: 25px;
 	}
+
+	.code, .grade {
+		float: left;
+		width: 45%;
+	}
+
+	.code {
+		margin-right: 10%;
+	}
+
+	.state {
+	    background: #eee;
+	    border: 1px solid rgba(0,0,0,.125);
+	    padding: 1.25rem;
+	    border-radius: 4px;
+	}
+
+	.criterion {
+		margin: 25px 0;
+		
+		.card-body {
+			padding-left: 2.5rem;
+		}
+	}
+	
+	.add-new {
+		margin-left: -1.25rem;
+
+		.form-control {
+			display: inline-block;
+		}
+
+		input[type="checkbox"] {
+		    vertical-align: top;
+			margin-top: 12px;
+		}
+
+		.add-new-detail {
+    		margin-left: 20px;
+    		display: inline-block;
+    		overflow: hidden;
+    		width: 90%;
+		}
+
+		.add-new-credit {
+			float: left;
+			width: 55px;
+    		padding: .5rem;
+		}
+		.add-new-desc {
+			width: auto;
+			margin-left: 10px;
+		}
+	}
 }
+
 
 
 
