@@ -1,5 +1,7 @@
 import './index.scss'
 import 'bootstrap';
+import './prism.css';
+import './prism.js';
 
 // login.html
 $('form#login-form').on('submit', function(e) {
@@ -24,3 +26,10 @@ $('button#grading-add-deduction').on('click', function (e) {
 	+'</div>'
 
 });
+
+// grading page, get user name from
+var search = document.location.search
+var username = search ? search.split('who=')[1].split('@')[0] : ""
+var gradingTitle = document.getElementById("student-name")
+gradingTitle && (gradingTitle.innerHTML = "Welcome Grader " + username)
+
