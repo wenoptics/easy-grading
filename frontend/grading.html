@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grading</title>
+</head>
+<body>
+	<div id="grading" class="page">
+		<nav aria-label="breadcrumb">
+		    <ol class="breadcrumb">
+		      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+		      <li class="breadcrumb-item active" aria-current="page">Assignment 4</li>
+		      <li class="breadcrumb-item active" aria-current="page">Dal176</li>
+		    </ol>
+		</nav>
+
+		<nav>
+		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+		    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">sub_01</a>
+		    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">sub_02</a>
+		    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">sub_03</a>
+		    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">sub_04</a>
+		  </div>
+		</nav>
+
+		<div class="files btn-group" role="group" aria-label="Basic example">
+		  <button type="button" class="btn btn-info">hehe.php</button>
+		  <button type="button" class="btn btn-info">solution.java</button>
+		  <button type="button" class="btn btn-info">style.css</button>
+		</div>
+		
+		<div class="content">
+			<div class="code">
+				<pre>
+					<code class="javascript">						
+public class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode c1 = l1;
+        ListNode c2 = l2;
+        ListNode sentinel = new ListNode(0);
+        ListNode d = sentinel;
+        int sum = 0;
+        while (c1 != null || c2 != null) {
+            sum /= 10;
+            if (c1 != null) {
+                sum += c1.val;
+                c1 = c1.next;
+            }
+            if (c2 != null) {
+                sum += c2.val;
+                c2 = c2.next;
+            }
+            d.next = new ListNode(sum % 10);
+            d = d.next;
+        }
+        if (sum / 10 == 1)
+            d.next = new ListNode(1);
+        return sentinel.next;
+    }
+}
+					</code>
+				</pre>
+			</div>
+			<div class="grade">
+				<div class="state">
+					<h5>
+						<span class="grading-icon">
+							<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1544332177659" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1049" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128"><defs><style type="text/css"></style></defs><path d="M544 768v64h288v64H192v-64h288v-64H96V128h832v640H544z" fill="#1BB3A6" p-id="1050"></path><path d="M304 320L192 432l44.8 44.8 67.2 70.4 44.8-44.8-67.2-70.4 67.2-67.2zM720 320l-44.8 44.8 67.2 67.2-67.2 70.4 44.8 44.8 67.2-70.4 48-44.8zM424.832 542.912l128-221.696 55.424 32-128 221.696z" fill="#C7F0EC" p-id="1051"></path></svg>
+						</span>
+						DAL176
+					</h5>
+					<p>Submitted by 2018-OCT-XXX (1st submission)</p>
+					<p>Machine Read by 2018-OCT-XXX</p>
+					<p>Human Read by 2018-OCT-XXX (DAL176)</p>
+				</div>
+				<form action="">
+					<div class="criterion">
+						<h5>
+							<span class="grading-icon">
+								<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1544332100517" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="931" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128"><defs><style type="text/css"></style></defs><path d="M96 832h480l64 128H32z" fill="#A5D6FA" p-id="932"></path><path d="M422.4 675.2l-44.8 89.6L128 515.2l89.6-44.8 316.8-316.8L579.2 64l249.6 249.6-89.6 44.8-134.4 134.4 384 339.2-92.8 92.8-339.2-384-134.4 134.4z" fill="#249CF2" p-id="933"></path></svg>
+							</span>
+							Score: <span>100</span>
+						</h5>
+						<div class="card">
+						  <div class="card-body">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+							  <label class="form-check-label" for="defaultCheck1">
+							    You are deducted 10 PTS for no reason
+							  </label>
+							</div>
+
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+							  <label class="form-check-label" for="defaultCheck1">
+							    You are deducted another 30 PTS for no reason
+							  </label>
+							</div>
+
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+							  <label class="form-check-label" for="defaultCheck1">
+							    -10 Your GCD must be recursive
+							  </label>
+							</div>
+
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+							  <label class="form-check-label" for="defaultCheck1">
+							    FYI (no deduction) your text indentation sucks
+							  </label>
+							</div>
+
+							<div class="add-new">
+							    <input type="checkbox" aria-label="Checkbox for following text input">
+							    <div class="add-new-detail">
+								    <input type="text" class="form-control add-new-credit" aria-label="Text input with checkbox" placeholder="+10">
+								    <input type="text" class="form-control add-new-desc" aria-label="Text input with checkbox" placeholder="Add custom comments here">
+							    </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+					
+					<div class="form-group" class="comment">
+					    <h5 for="exampleFormControlTextarea1">
+							<span class="grading-icon">
+								<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1544331565077" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="812" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128"><defs><style type="text/css"></style></defs><path d="M354.461538 118.153846v78.769231c129.969231 0 236.307692 106.338462 236.307693 236.307692 0 27.569231-3.938462 55.138462-15.753846 78.769231H787.692308v78.769231l118.153846-78.769231h78.769231V118.153846H354.461538z m512 315.076923h-157.538461V354.461538h157.538461v78.769231z m0-157.538461h-236.307692V196.923077h236.307692v78.769231z" fill="#F2B9A5" p-id="813"></path><path d="M354.461538 433.230769m-157.538461 0a157.538462 157.538462 0 1 0 315.076923 0 157.538462 157.538462 0 1 0-315.076923 0Z" fill="#ED7E55" p-id="814"></path><path d="M354.461538 669.538462c-173.292308 0-315.076923-3.938462-315.076923 236.307692h630.153847c0-240.246154-141.784615-236.307692-315.076924-236.307692z" fill="#ED7E55" p-id="815"></path></svg>
+							</span>
+						    Extra Comments
+						</h5>
+					    <textarea class="form-control" 
+							      id="exampleFormControlTextarea1" 
+							      rows="3" 
+							      placeholder="Write your Comments here">
+					    </textarea>
+					</div>
+					<input type="submit" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+	<script src="main.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+</html>
