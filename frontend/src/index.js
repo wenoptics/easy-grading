@@ -24,3 +24,9 @@ $('button#grading-add-deduction').on('click', function (e) {
 	+'</div>'
 
 });
+
+// grading page, get user name from
+var username = document.location.search.split('who=')[1].split('@')[0] || ""
+var gradingTitle = document.getElementById("student-name")
+gradingTitle && (gradingTitle.innerHTML = "Welcome Grader " + username)
+
