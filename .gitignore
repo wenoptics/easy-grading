@@ -13,6 +13,9 @@ composer.lock
 application/views/node_modules/
 application/views/dist/main.js
 
+frontend/node_modules/
+frontend/dist/main.js
+
 # IDE Files
 #-------------------------
 /nbproject/
