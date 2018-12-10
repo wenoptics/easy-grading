@@ -41,9 +41,20 @@ $('button#grading-add-deduction').on('click', function (e) {
 	return false;
 });
 
-// grading page, get user name from
-var search = document.location.search
-var username = search ? search.split('who=')[1].split('@')[0] : ""
-var gradingTitle = document.getElementById("student-name")
-gradingTitle && (gradingTitle.innerHTML = "Welcome Grader " + username)
+// grading page, get user name from url
+var search = document.location.search;
+var username = search ? search.split('who=') : [""];
+username = username.length > 1 ? username[1].split('@') : username[0];
+username = username.length > 0 ? username[0] : username;
+username = username.toUpperCase();
+console.log(username);
+var gradingTitle = document.getElementById("student-name");
+gradingTitle && (gradingTitle.innerHTML = "Welcome Grader " + username);
+$(".grading-student-id").html(username);
 
+
+// dashboard, click on students item
+$('a.dashboard-stu-item').on('click', function (e) {
+	e.preventDefault();
+	window.location.href = 'grading.html?who=' + $(this).html();
+});
