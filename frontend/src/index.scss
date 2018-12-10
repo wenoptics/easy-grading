@@ -75,11 +75,11 @@ body {
 
 	.classes, .students {
 		float: left;
-		width: 345px;
+		width: 40%;
 	}
 
 	.classes {
-		margin-right: 85px;
+		margin-right: 10%;
 	}
 
 	.card {
@@ -96,6 +96,10 @@ body {
 
 	.open-sub {
 		margin-top: 30px;
+	}
+
+	.students-search {
+		margin: 15px 0;
 	}
 }
 
