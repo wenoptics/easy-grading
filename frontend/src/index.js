@@ -13,14 +13,28 @@ $('form#login-form').on('submit', function(e) {
 // grading.html
 $('button#grading-add-deduction').on('click', function (e) {
 
-	$('input#grading-points').val();
-	$('input#grading-reason-text').val();
+	e.preventDefault();
 
-	'<div class="form-check">'
-	+	'<input class="form-check-input" type="checkbox" value="" id="defaultCheck4">'
-	+	'<label class="form-check-label" for="defaultCheck4">'
-	+	'FYI (no deduction) your text indentation sucks'
-	+'</label>'
-	+'</div>'
+	var p = $('input#grading-points').val();
+	var r = $('input#grading-reason-text').val();
 
+	function genLi(n, str) {
+		return '<div class="form-check">'
+			+ '<input class="form-check-input" type="checkbox" value="" id="defaultCheck'+n+'">'
+			+ '<label class="form-check-label" for="defaultCheck'+n+'">'
+			+ str
+			+ '</label>'
+			+ '</div>'
+	}
+
+	var ck = $('div.form-check');
+	ck = ck[ck.length - 1];
+
+	var i = $(ck).find('div input').id;
+	i = parseInt(i[i.length - 1]);
+
+	var parent = $('div#grading-deductions');
+	parent.html(parent.html() + genLi(i + 1, p + ' ' + r));
+
+	return false;
 });
