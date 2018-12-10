@@ -1,5 +1,7 @@
 import './index.scss'
 import 'bootstrap';
+import './prism.css';
+import './prism.js';
 
 // login.html
 $('form#login-form').on('submit', function(e) {
