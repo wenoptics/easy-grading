@@ -69,17 +69,44 @@ body {
 }
 
 #dash {
+	.open-sub {
+	    display: block;
+		margin: 0 auto;
+		margin-top: 30px;
+	    width: 50%;
+	}
+
 	h3 {
 		margin: 50px auto 30px;
 	}
 
 	.classes, .students {
 		float: left;
-		width: 345px;
+		width: 40%;
+	}
+
+	.students {
+		.grading-icon svg {
+			left: 0;
+			top: 4px;
+		}
+	}
+
+	.student-list {
+		height: 410px;
+		overflow: scroll;
+	    border: 2px solid #eee;
+	    border-radius: 5px;
 	}
 
 	.classes {
-		margin-right: 85px;
+		margin-right: 10%;
+
+		.dec span {
+			padding: 3px 5px;
+			border-radius: 5px;
+			color: #fff;
+		}
 	}
 
 	.card {
@@ -94,27 +121,29 @@ body {
 		overflow: hidden;
 	}
 
-	.open-sub {
-		margin-top: 30px;
+	.students-search {
+		margin: 15px 0;
 	}
 }
 
-#grading {
-	.grading-icon {
-		position: relative;
-		display: inline-block;
+.grading-icon {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+
+	svg {
+		position: absolute;
 		width: 20px;
 		height: 20px;
-
-		svg {
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			left: -10px;
-			top: -3px;
-		}
+		left: -10px;
+		top: -3px;
 	}
 
+
+}
+
+#grading {
 	h5 {
 		padding-left: 10px;
 	}
